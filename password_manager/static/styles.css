@@ -1,0 +1,104 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1c1c1c;
+    color: #00ff00;
+    margin: 0;
+    padding: 0;
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: #00ff00;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: #00ff00;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #ff00ff;
+}
+
+.content {
+    padding: 30px;
+}
+
+.fluo {
+    color: #00ff00;
+    font-size: 36px;
+}
+
+.intro-text, .generated-password {
+    color: #00ff00;
+}
+
+button.btn-submit {
+    background-color: #333;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button.btn-submit:hover {
+    background-color: #00ff00;
+    color: #121212;
+}
+
+input, select {
+    background-color: #333;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 10px;
+    width: 100%;
+    margin: 5px 0;
+}
+
+input[type="number"] {
+    width: auto;
+}
+
+table.password-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table.password-table th, table.password-table td {
+    border: 1px solid #00ff00;
+    padding: 10px;
+    text-align: left;
+}
+
+table.password-table th {
+    background-color: #333;
+}
+
+table.password-table tr:nth-child(even) {
+    background-color: #212121;
+}
+
+table.password-table tr:hover {
+    background-color: #2a2a2a;
+}
+
+#generatePassword {
+    background-color: #444;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#generatePassword:hover {
+    background-color: #00ff00;
+    color: #121212;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Password</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body class="dark-theme">
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/add_password">Add Password</a>
+        <a href="/admin_login">View Passwords</a>
+        <a href="/encrypt_decrypt">Encrypt / Decrypt</a>
+        <a href="/">Logout</a>
+    </div>
+    <div class="content">
+        <h1 class="fluo">Search Password</h1>
+
+        {% if results and results|length > 0 %}
+            <h2>Search Results:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for result in results %}
+                    <tr>
+                        <td>{{ result.service }}</td>
+                        <td>{{ result.username }}</td>
+                        <td>{{ result.password }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <h2>No results found.</h2>
+        {% endif %}
+
+        <a href="/view_password">Back to View Passwords</a>
+    </div>
+</body>
+</html>

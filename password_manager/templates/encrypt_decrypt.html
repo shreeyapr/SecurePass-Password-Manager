@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt/Decrypt</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body class="dark-theme">
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/add_password">Add Password</a>
+        <a href="/admin_login">View Passwords</a>
+        <a href="/encrypt_decrypt">Encrypt / Decrypt</a>
+        <a href="/">Logout</a>
+    </div>
+
+    <div class="content">
+        <h1 class="fluo">Encrypt/Decrypt Password</h1>
+        <form action="/encrypt_decrypt" method="POST">
+            <label for="text">Text (Password)</label>
+            <input type="text" id="text" name="text" required>
+
+            <label for="action">Action</label>
+            <select name="action" id="action">
+                <option value="encrypt">Encrypt</option>
+                <option value="decrypt">Decrypt</option>
+            </select>
+
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+
+        {% if result %}
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
